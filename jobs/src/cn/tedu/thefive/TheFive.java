@@ -16,7 +16,7 @@ public class TheFive {
         int a=0,b=0,c=0;
         for (char n:
              s.toCharArray()) {
-            if (n>64&&n<91||n>96&&n<123){
+            if (n>64&&n<='Z'||n>96&&n<123){
                 a++;
             }else if (n>47&&n<58){
                 b++;
@@ -27,4 +27,5 @@ public class TheFive {
         System.out.println(String.format("字母：%d次\n数字：%d次\n" +
                 "其他：%d次",a,b,c));
     }
+    //法2用正则
 }

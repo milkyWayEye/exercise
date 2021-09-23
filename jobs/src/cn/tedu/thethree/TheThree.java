@@ -12,5 +12,16 @@ public class TheThree {
             }
             System.out.print(s.charAt(i));
         }
+        System.out.println();
+        method2(s);
+    }
+    //法2用StringBuilder,删除"-",倒叙之后在特定位置加"-"
+    public static void method2(String s){
+        int index = s.indexOf("-");
+        StringBuilder s1 = new StringBuilder(s);
+        StringBuilder del = s1.deleteCharAt(index);
+        StringBuilder rever = del.reverse();
+        StringBuilder result = rever.insert(index,"-");
+        System.out.println(result);
     }
 }

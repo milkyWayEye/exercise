@@ -18,4 +18,15 @@ public class TheFour {
         }
         System.out.println(flg?"是回文":"不是回文");
     }
+
+    //法2用StringBuilder
+    public static void method2(String s) {
+        StringBuilder s1 = new StringBuilder(s);
+        String str1 = s1.reverse().toString();
+        if (s1.equals(str1)) {
+            System.out.println("是回文");
+        }else{
+            System.out.println("不是回文");
+        }
+    }
 }

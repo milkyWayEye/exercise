@@ -1,9 +1,7 @@
 package cn.tedu.theone;
 
 import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
-import java.util.Locale;
-import java.util.Scanner;
+import java.util.*;
 
 /*1.统计字符串中字符出现的次数 比如String str="abcdeabc"
 输出结果
@@ -32,5 +30,24 @@ public class TheOne {
             if (num[i]==0) break;
             System.out.println(String.format("%c:%d",ss.charAt(i),num[i]));
         }
+        method2(s);
+    }
+    //法2用哈希字典写
+    public static void method2(String s){
+        Map<Character,Integer> map = new HashMap<>();
+        for (char n:
+             s.toCharArray()) {
+            if (!map.containsKey(n)){
+                map.put(n,1);
+            }else {
+                map.put(n,map.get(n)+1);
+            }
+        }
+        System.out.println(map);
+    }
+    //法1可用开关数组优化
+    public static void method3(String s) {
+
     }
 }
+

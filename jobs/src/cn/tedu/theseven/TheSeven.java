@@ -6,5 +6,14 @@ public class TheSeven {
         String s1 = s.substring(0,1);
         String s2 = s.substring(1);
         System.out.printf("%s%s",s1.toUpperCase(),s2.toLowerCase());
+        System.out.println();
+        method2(s);
+    }
+    //法2StringBuilder
+    public static void method2(String s){
+        s=s.toLowerCase();
+        StringBuilder s1 = new StringBuilder(s);
+        s1.setCharAt(0,String.valueOf(s.charAt(0)).toUpperCase().charAt(0));
+        System.out.println(s1);
     }
 }
